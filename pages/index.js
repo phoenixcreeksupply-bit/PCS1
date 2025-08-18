@@ -1,32 +1,22 @@
-import Head from 'next/head';
-import Layout from '../components/layout';
-import Hero from '../components/hero';
-import CTA from '../components/cta';
+import Hero from "@/components/Hero";
+import Guide from "@/components/Guide";
+import Gear from "@/components/Gear";
+import CTA from "@/components/CTA";
+import { Metadata } from "next";
+
+export const metadata = {
+  title: "Phoenix Creek Supply · Rugged Kits for the Modern Stoic",
+  description:
+    "Digital kits and rugged tools built for self-reliant men. Phoenix Creek Supply offers prospecting guides, field-tested gear, and legacy-driven content. Built to endure.",
+};
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <title>Phoenix Creek Supply</title>
-        <meta name="description" content="Rugged Tools for the Modern Stoic. Digital kits. Bushcraft gear. Earn your legacy." />
-        <meta property="og:title" content="Phoenix Creek Supply" />
-        <meta property="og:description" content="Rugged Tools for the Modern Stoic." />
-        <meta property="og:image" content="/og.jpg" />
-      </Head>
-
-      <Hero
-        title="Rugged Tools for the Modern Stoic"
-        subtitle="Digital kits. Bushcraft gear. Earn your legacy."
-        ctaText="Browse the Field Guide"
-        ctaLink="/guide"
-      />
-
-      <CTA
-        title="Legacy Is Built, Not Bought"
-        description="From the fireline to the backcountry, our tools and guides are forged for men who live with purpose. Tap into the Phoenix."
-        buttonText="Explore the Gear"
-        buttonLink="/gear"
-      />
-    </Layout>
+    <main className="flex flex-col items-center justify-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 py-12 space-y-24">
+      <Hero />
+      <Guide />
+      <Gear />
+      <CTA />
+    </main>
   );
-    }
+}
