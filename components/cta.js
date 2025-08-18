@@ -1,16 +1,20 @@
-export default function CTA({ title, description, buttonText, buttonLink }) {
+export default function CTA() {
   return (
-    <section className="py-20 px-6 bg-gray-950 border-t border-gray-800 text-center">
-      <div className="max-w-3xl mx-auto">
-        <h2 className="text-4xl font-bold text-white mb-4">{title}</h2>
-        <p className="text-lg text-gray-400 mb-8">{description}</p>
-        <a
-          href={buttonLink}
-          className="inline-block bg-amber-700 hover:bg-amber-800 text-white font-semibold px-8 py-3 rounded-full transition"
-        >
-          {buttonText}
-        </a>
-      </div>
+    <section className="bg-gray-100 dark:bg-gray-800 py-12 px-6 text-center rounded-xl shadow-inner my-12 max-w-5xl mx-auto">
+      <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+        Ready to Level Up?
+      </h2>
+      <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+        Download our field guide, gear up, and start building your legacy today.
+      </p>
+      <a
+        href="https://gumroad.com/l/modernstoic"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-black text-white px-6 py-3 rounded-2xl text-lg font-semibold shadow hover:bg-gray-800 transition"
+      >
+        Buy the Guide
+      </a>
     </section>
   );
 }
