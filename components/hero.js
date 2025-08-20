@@ -1,18 +1,26 @@
+// components/Hero.jsx
+
+import React from 'react';
+import Link from 'next/link';
+
 export default function Hero() {
   return (
-    <section className="text-center max-w-4xl mx-auto py-16">
-      <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-6">
+    <div className="text-center py-20 px-4 bg-[#f5f0e6]">
+      <h1 className="text-5xl font-bold mb-4 text-gray-900">
         Rugged Tools for the Modern Stoic
       </h1>
-      <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8">
+      <p className="text-lg text-gray-700 mb-8">
         Digital kits. Bushcraft gear. Earn your legacy.
       </p>
-      <a
-        href="/guide"
-        className="inline-block bg-black text-white px-6 py-3 rounded-2xl text-lg font-semibold shadow hover:bg-gray-800 transition"
+      <Link
+        href="https://phoenixcreeksupply.gumroad.com/l/gnqvw"
+        passHref
+        legacyBehavior
       >
-        Start Your Guide
-      </a>
-    </section>
+        <a className="bg-[#8b5e3c] text-white px-6 py-3 rounded-full text-lg hover:bg-[#6e4b2e] transition duration-300">
+          Buy the Field Guide on Gumroad →
+        </a>
+      </Link>
+    </div>
   );
 }
